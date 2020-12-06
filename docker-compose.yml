@@ -1,0 +1,10 @@
+version: "3"
+services:
+  jupyter-lab:
+    build: .
+    ports: 
+      - 8888:8888
+    volumes: 
+      - '.:/mecab_work'
+    tty: true
+    stdin_open: true
