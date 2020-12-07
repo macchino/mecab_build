@@ -1,10 +1,16 @@
-version: "3"
+version: "3.5"
 services:
   jupyter-lab:
     build: .
     ports: 
       - 8888:8888
+      # ローカルでマウントするフォルダ
     volumes: 
-      - '.:/mecab_work'
+      - '.:/work_space'
+      # -itの部分
     tty: true
     stdin_open: true
+    # イメージ名を記述
+    image: mecab-love
+    # コンテナ名を記述
+    container_name: mecab-jupyter-love

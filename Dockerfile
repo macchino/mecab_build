@@ -49,7 +49,7 @@ RUN pip install autopep8 \
 
 WORKDIR /
 
-RUN mkdir /work
+RUN mkdir /work_space
 
 # execute jupyterlab as a default command
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
