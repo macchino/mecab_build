@@ -26,7 +26,7 @@ RUN apt-get update \
     && apt-get install -y curl \
     && apt-get install -y xz-utils \
     && apt-get install -y file \
-    &&  vi /etc/mecabrc \
+    && vi /etc/mecabrc \
     && dicdir = /usr/lib/mecab/dic/mecab-ipadic-neologd
 
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
