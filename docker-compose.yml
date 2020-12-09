@@ -6,8 +6,8 @@ services:
       - 8888:8888
       # ローカルでマウントするフォルダ
     volumes: 
-      - '.:/work_space'
-      # -itの部分
+      - '..:/iCloudDrive\mecab_works'
+      # -itの部分 
     tty: true
     stdin_open: true
     # イメージ名を記述

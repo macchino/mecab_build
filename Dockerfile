@@ -25,9 +25,7 @@ RUN apt-get update \
     && apt-get install -y make \
     && apt-get install -y curl \
     && apt-get install -y xz-utils \
-    && apt-get install -y file \
-    && vi /etc/mecabrc \
-    && dicdir = /usr/lib/mecab/dic/mecab-ipadic-neologd
+    && apt-get install -y file 
 
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
     && cd mecab-ipadic-neologd \
@@ -51,7 +49,7 @@ RUN pip install autopep8 \
 
 WORKDIR /
 
-RUN mkdir /work_space
+RUN mkdir /notebook
 
 # execute jupyterlab as a default command
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
