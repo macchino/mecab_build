@@ -31,7 +31,9 @@ RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
     && cd mecab-ipadic-neologd \
     && bin/install-mecab-ipadic-neologd -n -y 
 
-RUN pip install mecab-python3
+RUN pip install mecab-python3 \
+    && pip install mojimoji
+
 
 # update pip and conda & 色変更 
 RUN pip install --upgrade pip &&\
