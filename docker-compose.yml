@@ -6,7 +6,7 @@ services:
       - 8888:8888
       # ローカルでマウントするフォルダ
     volumes: 
-      - 'C:\Users\macki\iCloudDrive\mecab_works:/notebook'
+      - 'C:\Users\macki\iCloudDrive\scraping_works:/notebook'
       # -itの部分 
     tty: true
     stdin_open: true
